@@ -1,8 +1,10 @@
+console.log("test");
+
 function addSong() {
-    document.body.style.backgroundColor = "red";
+    console.log("test");
 }
 
-chrome.action.onClicked.addListener((tab) => {
+browser.browserAction.onClicked.addListener(async(info, tab) => {
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: addSong,

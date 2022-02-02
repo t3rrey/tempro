@@ -1,12 +1,22 @@
 {
-    "mainfest_version": 3,
+    "manifest_version": 3,
     "name": "Tempro",
-    "description": "An extention that connects discord bots to common browser functions",
-    "version": "1.0",
-    "content_scripts": [{}],
-    "browser_action": {
-        "default_icon": "icon.png",
-        "default_pop": "index.html"
+    "version": "0.1",
+    "cross_origin_embedder_policy": {
+        "value": "require-corp"
     },
-    "permissions": []
+    "cross_origin_opener_policy": {
+        "value": "same-origin"
+    },
+    "action": { "default_icon": "icon.png" },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["./content.js"],
+        "run_at": "document_end"
+    }],
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "permissions": ["tabs"]
 }
