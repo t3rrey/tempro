@@ -1,12 +1,7 @@
-console.log("test");
+const getCurrentTab = async() => {
+    let queryOptions = { active: true, currentWindow: true };
+    let [tab] = await chrome.tabs.query(queryOptions);
+    return tab;
+};
 
-function addSong() {
-    console.log("test");
-}
-
-browser.browserAction.onClicked.addListener(async(info, tab) => {
-    chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: addSong,
-    });
-});
+modules.export = { getCurrentTab };
