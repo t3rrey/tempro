@@ -1,0 +1,24 @@
+{
+    "name": "tempro",
+    "version": "1.0.0",
+    "description": "",
+    "main": "background.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./server/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/t3rrey/tempro.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/t3rrey/tempro/issues"
+    },
+    "homepage": "https://github.com/t3rrey/tempro#readme",
+    "dependencies": {
+        "express": "^4.17.2"
+    }
+}
